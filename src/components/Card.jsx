@@ -1,4 +1,4 @@
-function Contenedor({ children, titulo }) {
+function Card({ children, titulo }) {
   return (
     // <div className="min-h-screen bg-linear-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center p-8">
     //   {children}
@@ -28,4 +28,4 @@ function Contenedor({ children, titulo }) {
   );
 }
 
-export default Contenedor;
+export default Card;
