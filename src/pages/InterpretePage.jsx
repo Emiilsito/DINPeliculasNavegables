@@ -11,7 +11,6 @@ function InterpretePage() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 w-full mt-8">
           {peliculas
-          // .filter(pelicula => pelicula.clasificacion === "Drama") // solo películas de Drama
           .map(pelicula =>
             pelicula.actores.map((actor, index) => (
               <Interprete

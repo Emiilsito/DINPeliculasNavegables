@@ -1,7 +1,8 @@
 import Header from "./components/Header";
 import PeliculasPage from "./pages/PeliculasPage";
 import InterpretePage from "./pages/InterpretePage";
-import Home from "./pages/Home";
+import Home from "./pages/HomePage";
+import AdminPage from "./pages/AdminPage";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 
@@ -11,13 +12,17 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} /> 
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/inicio" element={<Navigate to={'/'} />} />
           <Route path="/peliculas" element={<PeliculasPage />} />
           <Route path="/interpretes" element={<InterpretePage />} />
-          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="*" element={<p>Error 404: Página no encontrada</p>} />
         </Routes>
       </div>
     </BrowserRouter>
+
+
   );
 }
 
