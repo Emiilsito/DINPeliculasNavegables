@@ -2,10 +2,11 @@ import Layout from "../components/Layout";
 import Interprete from "../components/Interprete";
 import peliculas from "../data/peliculas";
 
-function InterpretePage() {
-    return (
 
-  <Layout titulo="Intérpretes de películas destacadas" sectionId="interpretes">
+function InterpretePage() {
+  return (
+
+  <Layout titulo="Intérpretes de películas" sectionId="interpretes">
       <p className="body-text">
         Listado de intérpretes disponibles:
       </p>
