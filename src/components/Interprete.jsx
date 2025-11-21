@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 
-function Interprete({id, foto, nombre, imgClassName = '', containerClassName = '', children }) {
+function Interprete({id, actorIndex, foto, nombre, imgClassName = '', containerClassName = '', children }) {
+    const url = actorIndex !== undefined
+        ? `/interpretes/${id}-${actorIndex}`
+        : `/peliculas/${id}`;
+    
     return (
-        <Link to={`/peliculas/${id}`} className="block">
+        <Link to={url} className="block">
             <article
                 tabIndex="0"
                 className={`flex flex-col items-start gap-3 p-4 rounded-lg bg-[linear-gradient(0deg,rgba(247,247,247,1)_0%,rgba(247,247,247,1)_100%)] shadow-md hover:shadow-lg transition-shadow duration-300 ${containerClassName}`}

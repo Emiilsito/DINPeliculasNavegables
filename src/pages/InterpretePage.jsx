@@ -15,7 +15,9 @@ function InterpretePage() {
           .map(pelicula =>
             pelicula.actores.map((actor, index) => (
               <Interprete
-                key={index}
+                key={`${pelicula.id}-${index}`}
+                id={pelicula.id}
+                actorIndex={index}
                 nombre={actor.nombre}
                 foto={actor.imagen}
               >
